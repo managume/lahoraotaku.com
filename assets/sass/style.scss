@@ -133,30 +133,53 @@ body{
 }
 
 //Reproductor
-#player h3 i{
-    color: $rojo;
-}
-#player h3,
-#player audio{
-    display: none;
+#player{
+    div.player-content{
+        background: #f1f3f4;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        h3{
+            text-transform: uppercase;
+            font-size: 1rem;
+            color: $negro;
+            padding: 0rem;
+            margin: 0rem;
+            letter-spacing: 0.1rem;
+            i{
+                color: $rojo;
+            }
+        }
+    }
+    div.player-content{
+        #audio-title,
+        #audio-player{
+            display: none;
+        }
+    }
 }
 //Audioteca
 #audioteca-list{
-    display: none;
-
+    list-style-type: none;
+    -webkit-margin-before: 0rem;
+    -webkit-margin-after: 0rem;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0rem;
+    background: #f1f3f4;
+    padding: 1rem;
+    border-radius: 0.3rem;
     li{
         display:flex;
         width: 100%;
         justify-content: space-between;
         align-items: center;
         padding: 1rem 0;
-        img{
-            width: 4rem;
-            height: 4rem;
-        }
         h3{
             flex-grow: 1;
             overflow-wrap: break-word;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 0.1rem;
         }
         i{
             padding: 0 1rem;

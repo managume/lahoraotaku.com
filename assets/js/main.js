@@ -19,6 +19,8 @@ $(document).ready(function(){
         var audio  = data.items[0];
         $('#audio-title').html('<i class="fas fa-podcast"></i> '+audio.title);
         $('#audio-player').attr('src',audio.enclosure.link);
+        console.log(audio);
+        $('#audio-description').html(audio.description);
         $('#player .load-message').fadeToggle();
         $('#audio-title').fadeToggle();
         $('#audio-player').fadeToggle();
@@ -27,16 +29,15 @@ $(document).ready(function(){
         data.items.forEach(item => {
             html += `
             <li class="audioteca-item" id="`+item.guid+`">
-                <img src="`+item.thumbnail+`" alt="">
+                <i class="fas fa-podcast"></i> 
                 <h3>`+item.title+`</h3>
                 <i class="em em-calendar" title="`+item.pubDate+`"></i>
-                <a href="`+item.enclosure.link+`"><i class="em em-file_folder"></i></a>
+                <a href="`+item.enclosure.link.replace('http:','https:')+`"><i class="em em-file_folder"></i></a>
             </li>
             `;
         });
         $('#audioteca-list').html(html);
         $('#audioteca .load-message').fadeToggle();
-        $('#audioteca-list').fadeToggle();
     });
 });
 
