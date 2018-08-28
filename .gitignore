@@ -1,4 +1,7 @@
-#Sass Map files
+#Auto Sass files
 *.map
+/.sass-cache/*
 #Fonts folder
 /fonts/*
+#Visual Code files and dir
+/.vscode/*
