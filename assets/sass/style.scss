@@ -171,23 +171,63 @@ body{
 //Audioteca
 #audioteca-list{
     background: #f1f3f4;
-    padding: 1rem;
     border-radius: 0.3rem;
-    li{
-        display:flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 0;
-        h3{
-            flex-grow: 1;
-            overflow-wrap: break-word;
-            text-transform: uppercase;
-            font-size: 1rem;
-            letter-spacing: 0.1rem;
+    li.season:first-child > h3{
+        border-top-left-radius: 0.3rem;
+        border-top-right-radius: 0.3rem;
+    }
+    li.season:last-child > h3{
+        border-bottom-left-radius: 0.3rem;
+        border-bottom-right-radius: 0.3rem;
+    }
+    li.season{
+        h3.season-title{
+            background: $gris;
+            color: white;
+            margin: 0;
+            padding: 1rem 0;
+            padding-left: 1rem;
+
+            i.fa-calendar{
+                margin-right: 2rem;
+            }
+
+            span.load-message{
+                float: right;
+                padding-right: 2rem;
+                color: white;
+            }
+            
+            i.toggle-season-list{
+                color: white;
+                display: none;
+                cursor: pointer;
+                float: right;
+                margin-right: 2rem;
+                z-index: 99;
+                border-radius: 0.3rem;
+            }
         }
-        i{
-            padding: 0 1rem;
+        ul.season-episodes{
+            display: none;
+
+            li.episode{
+                display:flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 0;
+                h3.episode-title{
+                    flex-grow: 1;
+                    overflow-wrap: break-word;
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                    letter-spacing: 0.1rem;
+                }
+                i{
+                    padding: 0 1rem;
+                }
+            }
         }
     }
 }
@@ -195,11 +235,9 @@ body{
 @keyframes loading{
     0% {
         transform: rotate(0deg);
-        color: $rojo;
     }
     100% {
         transform: rotate(360deg);
-        color: $rojo;
     }
 
 }
