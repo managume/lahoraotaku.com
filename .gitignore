@@ -1,0 +1,4 @@
+#Sass Map files
+*.map
+#Fonts folder
+/fonts/*
