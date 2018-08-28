@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>La Hora Otaku</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="assets/img/logo.svg" alt="La Hora Otaku">
+    </header>
+    <main id="contenido" class="content">
+        <section class="col">
+            <div id="podcast">
+                <h2>Podcast <i class="em-svg em-studio_microphone"></i></h2>
+                <p>
+                    ¡Hola niños y niñas! Bienvenidos a la web oficial de La Hora Otaku, un podcast que desde el año
+                    2009 os trae lo último en manga, anime y Japón, sin pelos en la lengua y con mucha opinión.
+
+                    Presentado por Stif, guionizado y dirigido por Will, con la sabiduría de Ikzer, con el odio
+                    desmedido de Yumi y todo ello editado por Manu.
+                </p>
+            </div>
+            <div id="plataformas">
+                <h2>Dónde Escucharnos <i class="em-svg em-interrobang"></i></h2>
+                <ul>
+                    <li><a href="https://itunes.apple.com/gh/podcast/la-hora-otaku/id341239898?mt=2" target="_blank"><i class="em-svg em-green_apple"></i> iTunes</a></li>
+                    <li><a href="https://www.ivoox.com/podcast-hora-otaku-podcast_sq_f19336_1.html" target="_blank"><i class="em-svg em-orange_book"></i> iVoox</a></li>
+                </ul>
+            </div>
+            <div id="tienda">
+                <h2>Tienda Oficial <i class="em-svg em-shopping_bags"></i></h2>
+                <a href="https://www.latostadora.com/lahoraotaku" target="_blank"><button class="btn-red"><i class="fas fa-shopping-bag"></i> Ir a la
+                        Tienda</button></a>
+            </div>
+            <div id="redes">
+                <h2>Nuestras Redes <i class="em-svg em-iphone"></i></h2>
+                <ul>
+                    <li><a href="https://www.twitter.com/lahoraotaku" target="_blank"><i class="em-svg em-bird"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/lahoraotaku" target="_blank"><i class="em-svg em---1"></i> Facebook</a></li>
+                    <li><a href="https://www.youtube.com/lahoraotaku" target="_blank"><i class="em-svg em-tv"></i> YouTube</a></li>
+                    <li><a href="mailto:contacto@lahoraotaku.com" target="_blank"><i class="em-svg em-mailbox"></i> Correo Electrónico</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="col">
+            <div id="donaciones">
+                <h2>Donaciones <i class="em-svg em-man-bowing"></i></h2>
+                <a href="https://www.paypal.com/donate/?token=YLsHqeU025vUNsQfUwrTYic5q7SfrieHDsa44bQipTXvlZwWL0xaU3-2X_1q4OPzuJ_VEm&country.x=ES&locale.x=ES" target="_blank"><button class="btn-blue"><i class="fab fa-paypal"></i> Haznos una donación</button></a>
+            </div>
+            <div id="player">
+                <h2>Último Episodio <i class="em-svg em-new"></i></h2>
+                <span class="load-message"><i class="load-icon fas fa-circle-notch"></i> Cargando episodio</span>
+                <h3 id="audio-title"></h3>
+                <audio id="audio-player" controls preload="metadata" src="#"></audio>
+            </div>
+            <div id="audioteca">
+                <h2>Audioteca <i class="em-svg em-headphones"></i></h2>
+                <span class="load-message"><i class="load-icon fas fa-circle-notch"></i> Cargando audioteca</span>
+                <ul id="audioteca-list">
+                    <li class="audioteca-item">
+                        <img src="http://www.lahoraotaku.com/wp-content/uploads/2017/04/LHO-Nuevo2-500x500.jpg" alt="">
+                        <h3>La Hora Otaku 9x08 - Espectáculo primaveral</h3>
+                        <i class="em em-calendar" title="2018-07-16 10:00:00"></i>
+                        <a href=""><i class="em em-file_folder"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
