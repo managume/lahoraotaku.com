@@ -61,14 +61,23 @@ body {
       font-size: 2rem;
       text-transform: uppercase;
       font-weight: 900; }
+    body #contenido p {
+      text-align: justify; }
     body #contenido h3 {
       text-transform: uppercase;
       font-size: 1.2rem;
       color: #5c5c5c; }
     body #contenido audio {
       width: 100%; }
-    body #contenido ul > li {
-      list-style-type: none; }
+    body #contenido ul {
+      list-style-type: none;
+      -webkit-margin-before: 0rem;
+      -webkit-margin-after: 0rem;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
+      -webkit-padding-start: 0rem; }
+      body #contenido ul li {
+        list-style-type: none; }
     body #contenido button {
       width: 100%;
       height: 3rem;
@@ -107,12 +116,6 @@ body {
   display: none; }
 
 #audioteca-list {
-  list-style-type: none;
-  -webkit-margin-before: 0rem;
-  -webkit-margin-after: 0rem;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-  -webkit-padding-start: 0rem;
   background: #f1f3f4;
   padding: 1rem;
   border-radius: 0.3rem; }
@@ -131,9 +134,22 @@ body {
     #audioteca-list li i {
       padding: 0 1rem; }
 
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+    color: #ff1744; }
+  100% {
+    transform: rotate(360deg);
+    color: #ff1744; } }
 @media (max-width: 1000px) {
+  body {
+    grid-template-columns: 100%;
+    grid-template-rows: 10% auto;
+    grid-template-areas: 'header' 'content'; }
+
   #contenido {
-    display: grid;
+    padding: 0 3rem !important;
+    padding-top: 5rem !important;
     grid-template-rows: auto auto;
     grid-template-columns: auto !important;
     grid-template-areas: "content-left" "content-right" !important; }
@@ -144,12 +160,32 @@ body {
     #contenido section.col:last-child {
       grid-area: content-right;
       padding-left: 0 !important; } }
-@keyframes loading {
-  0% {
-    transform: rotate(0deg);
-    color: #ff1744; }
-  100% {
-    transform: rotate(360deg);
-    color: #ff1744; } }
+@media (max-width: 400px) {
+  body {
+    font-size: 1rem !important;
+    background: white; }
+
+  header {
+    background: #ff1744 !important; }
+    header img {
+      height: 9rem !important; }
+
+  #contenido {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0rem !important;
+    padding-top: 5rem !important; }
+    #contenido section > div {
+      padding: 1.5rem 0 !important;
+      width: 80% !important;
+      margin: 0 auto !important; }
+    #contenido h2,
+    #contenido p {
+      -webkit-margin-before: 0em !important;
+      -webkit-margin-after: 0em !important; }
+    #contenido h2 {
+      font-size: 1.2rem !important; }
+    #contenido button {
+      font-size: 1.2rem !important; } }
 
 /*# sourceMappingURL=main.css.map */
